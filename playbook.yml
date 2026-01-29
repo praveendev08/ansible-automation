@@ -1,0 +1,11 @@
+- hosts: webservers
+  become: yes
+  roles:
+    - docker
+    - nginx
+    - app
+
+- hosts: ci
+  become: yes
+  roles:
+    - jenkins
