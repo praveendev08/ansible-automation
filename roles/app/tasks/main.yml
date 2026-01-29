@@ -1,0 +1,9 @@
+- name: Create app directory
+  file:
+    path: /var/www/html
+    state: directory
+
+- name: Deploy index.html
+  copy:
+    content: "<h1>Ansible App Deployed Successfully</h1>"
+    dest: /var/www/html/index.html
